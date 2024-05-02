@@ -13,6 +13,7 @@ import "./index.css";
 import Products from "./pages/Products.jsx";
 
 import { CounterCountextProvider } from "./context/CounterContext";
+import { TitleColorContextProvider } from "./context/TitleColorContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <CounterCountextProvider>
-      <RouterProvider router={router} />
+      <TitleColorContextProvider>
+        <RouterProvider router={router} />
+      </TitleColorContextProvider>
     </CounterCountextProvider>
   </React.StrictMode>
 );
