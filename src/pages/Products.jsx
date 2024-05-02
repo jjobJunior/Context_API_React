@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { CounterContext } from "../context/CounterContext";
-const Products = () => {
-  const { counter } = useContext(CounterContext);
+import { useCounterContext } from "../hooks/useCounterContext";
 
+const Products = () => {
+  const { counter } = useCounterContext();
   return (
     <div>
       <h1>Pagina Produtos...! </h1>
